@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tiendita Escolar</title>
+    <style>
+        .carrito-lista { 
+            background:#f9f9f9; 
+            padding:10px; 
+            border:1px solid #ccc; 
+        }
+        .oculto { display:none; }
+        .product-card { 
+            border:1px solid #ddd; 
+            padding:10px; 
+            margin:10px; 
+        }
+        .buy-button { 
+            background:#4CAF50; 
+            color:white; 
+            border:none; 
+            padding:5px 10px; 
+            cursor:pointer; 
+        }
+        .buy-button:hover { 
+            background:#45a049; 
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+
+    
+    <header>
+        <button class="carrito">Carrito <span>0</span></button>
+    </header>
+
+    <!-- Lista del carrito -->
+    <div class="carrito-lista oculto">
+        <ul id="lista-carrito"></ul>
+        <div id="total-carrito">Total: $0</div>
+    </div>
+
+
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-icon">🎒</span>
+            <div>
+                <h1>Tiendita Escolar</h1>
+                <p>Todo para volver a clases</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+        <a href="inicio.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="contacto.html">Contacto</a>
+        </nav>
+
+
+        <button class="carrito">
+            🛒 Carrito
+            <span>0</span>
+        </button>
+
+    </header>
+
+
+    
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-text">
+
+                <span class="etiqueta">✨ REGRESO A CLASES ✨</span>
+
+                <h2>
+                    ¡Todo lo que necesitas
+                    <span>para la escuela!</span>
+                </h2>
+
+                <p>
+                    Encuentra cuadernos, mochilas, colores, lápices,
+                    plumas y mucho más en un solo lugar.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#productos" class="btn-primary">
+                        Ver productos →
+                    </a>
+
+                    <a href="#ofertas" class="btn-secondary">
+                        Ver ofertas
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="floating pencil">✏️</div>
+                <div class="floating notebook">📓</div>
+                <div class="floating ruler">📏</div>
+
+                <div class="school-bag">
+                    🎒
+                </div>
+
+                <h3>¡Prepárate para clases!</h3>
+                <p>Productos escolares a excelentes precios.</p>
+
+            </div>
+
+        </section>
+
+
+<section class="productos">
+    <!-- Cuaderno -->
+    <article class="product-card">
+        <h3>📓 Cuaderno Profesional</h3>
+        <p>Cuaderno de 100 hojas para tus materias.</p>
+        <p class="precio">$50</p>
+        <button class="buy-button" data-producto="Cuaderno Profesional" data-precio="50">🛒 Comprar</button>
+    </article>
+
+    <!-- Plumas -->
+    <article class="product-card">
+        <h3>🖊️ Paquete de Plumas</h3>
+        <p>Plumas de tinta azul y negra.</p>
+        <p class="precio">$30</p>
+        <button class="buy-button" data-producto="Paquete de Plumas" data-precio="30">🛒 Comprar</button>
+    </article>
+
+    <!-- Colores -->
+    <article class="product-card">
+        <h3>🎨 Caja de Colores</h3>
+        <p>24 colores para tus trabajos.</p>
+        <p class="precio">$80</p>
+        <button class="buy-button" data-producto="Caja de Colores" data-precio="80">🛒 Comprar</button>
+    </article>
+
+    <!-- Mochila -->
+    <article class="product-card">
+        <h3>🎒 Mochila Escolar</h3>
+        <p>Cómoda y resistente para todos los días.</p>
+        <p class="precio">$250</p>
+        <button class="buy-button" data-producto="Mochila Escolar" data-precio="250">🛒 Comprar</button>
+    </article>
+</section>
+
+
+
+        <!-- CATEGORÍAS -->
+        <section class="categories">
+
+            <div class="section-title">
+                <span>📚</span>
+                <div>
+                    <h2>Compra por categoría</h2>
+                    <p>Encuentra rápidamente lo que necesitas</p>
+                </div>
+            </div>
+
+            <div class="category-grid">
+
+                <div class="category">
+                    <span>📓</span>
+                    <h3>Cuadernos</h3>
+                    <p>Para todas tus materias</p>
+                </div>
+
+                <div class="category">
+                    <span>✏️</span>
+                    <h3>Escritura</h3>
+                    <p>Lápices y plumas</p>
+                </div>
+
+                <div class="category">
+                    <span>🎨</span>
+                    <h3>Colores</h3>
+                    <p>Da vida a tus trabajos</p>
+                </div>
+
+                <div class="category">
+                    <span>🎒</span>
+                    <h3>Mochilas</h3>
+                    <p>Transporta tus útiles</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTOS -->
+        <section class="productos" id="productos">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="mini-title">⭐ LOS FAVORITOS</span>
+                    <h2>Productos destacados</h2>
+                    <p>Todo lo necesario para comenzar tus clases.</p>
+                </div>
+
+                <button class="view-all">
+                    Ver todos →
+                </button>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <!-- PRODUCTO 1 -->
+                <article class="product-card">
+
+                    <div class="product-image purple">
+                        <span>📓</span>
+                        <small>POPULAR</small>
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Papelería
+                        </span>
+
+                        <h3>Cuaderno Profesional</h3>
+
+                        <p>
+                            Cuaderno de 100 hojas para tus materias.
+                        </p>
+
+                        <div class="price">
+                            <strong>$35</strong>
+                            <del>$45</del>
+                        </div>
+
+                        <button class="buy-button">
+                            🛒 Comprar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 2 -->
+                <article class="product-card">
+
+                    <div class="product-image blue">
+                        <span>🖊️</span>
+                        <small>OFERTA</small>
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Escritura
+                        </span>
+
+                        <h3>Paquete de Plumas</h3>
+
+                        <p>
+                            Plumas de tinta azul y negra.
+                        </p>
+
+                        <div class="price">
+                            <strong>$25</strong>
+                            <del>$32</del>
+                        </div>
+
+                        <button class="buy-button">
+                            🛒 Comprar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 3 -->
+                <article class="product-card">
+
+                    <div class="product-image orange">
+                        <span>🎒</span>
+                        <small>NUEVO</small>
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Mochilas
+                        </span>
+
+                        <h3>Mochila Escolar</h3>
+
+                        <p>
+                            Cómoda y resistente para todos los días.
+                        </p>
+
+                        <div class="price">
+                            <strong>$280</strong>
+                            <del>$350</del>
+                        </div>
+
+                        <button class="buy-button">
+                            🛒 Comprar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 4 -->
+                <article class="product-card">
+
+                    <div class="product-image pink">
+                        <span>🖍️</span>
+                        <small>TOP</small>
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Arte
+                        </span>
+
+                        <h3>Colores de Madera</h3>
+
+                        <p>
+                            Caja con 24 colores para tus trabajos.
+                        </p>
+
+                        <div class="price">
+                            <strong>$65</strong>
+                            <del>$80</del>
+                        </div>
+
+                        <button class="buy-button">
+                            🛒 Comprar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 5 -->
+                <article class="product-card">
+
+                    <div class="product-image green">
+                        <span>📐</span>
+                        <small>ÚTIL</small>
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Geometría
+                        </span>
+
+                        <h3>Juego Geométrico</h3>
+
+                        <p>
+                            Regla, escuadras y transportador.
+                        </p>
+
+                        <div class="price">
+                            <strong>$45</strong>
+                            <del>$55</del>
+                        </div>
+
+                        <button class="buy-button">
+                            🛒 Comprar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 6 -->
+                <article class="product-card">
+
+                    <div class="product-image yellow">
+                        <span>✏️</span>
+                        <small>AHORRA</small>
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            Escritura
+                        </span>
+
+                        <h3>Lápices HB</h3>
+
+                        <p>
+                            Paquete de 12 lápices escolares.
+                        </p>
+
+                        <div class="price">
+                            <strong>$30</strong>
+                            <del>$40</del>
+                        </div>
+
+                        <button class="buy-button">
+                            🛒 Comprar
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- OFERTA -->
+        <section class="offer" id="ofertas">
+
+            <div class="offer-content">
+
+                <span>🔥 OFERTA ESPECIAL</span>
+
+                <h2>
+                    ¡Regreso a clases
+                    con descuento!
+                </h2>
+
+                <p>
+                    Obtén hasta <strong>20% de descuento</strong>
+                    en productos seleccionados.
+                </p>
+
+                <button>
+                    Aprovechar oferta →
+                </button>
+
+            </div>
+
+            <div class="offer-icons">
+                🎒
+                📚
+                ✏️
+                🎨
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section class="contact" id="contacto">
+
+            <div>
+                <span>📩 CONTÁCTANOS</span>
+                <h2>¿Necesitas ayuda?</h2>
+                <p>
+                    Estamos aquí para ayudarte a encontrar
+                    todo lo que necesitas para la escuela.
+                </p>
+            </div>
+
+            <div class="contact-box">
+                📞 <strong>55 1234 5678</strong>
+            </div>
+
+            <div class="contact-box">
+                ✉️ <strong>tiendaescolar@gmail.com</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🎒 <strong>Tiendita Escolar</strong>
+            <p>Tu mejor aliado para la escuela.</p>
+        </div>
+
+        <div>
+            <h3>Enlaces</h3>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#ofertas">Ofertas</a>
+        </div>
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 55 1234 5678</p>
+            <p>📍 Ciudad de México</p>
+        </div>
+
+        <div>
+            <h3>Síguenos</h3>
+            <div class="social">
+                <span>📘</span>
+                <span>📸</span>
+                <span>🎵</span>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        © 2026 Tiendita Escolar · Todos los derechos reservados
+    </div>
+    <script>
+    const carritoBtn = document.querySelector('.carrito');
+    const carritoContador = carritoBtn.querySelector('span');
+    const carritoLista = document.querySelector('#lista-carrito');
+    const carritoBox = document.querySelector('.carrito-lista');
+    const botonesCompra = document.querySelectorAll('.buy-button');
+    const totalBox = document.querySelector('#total-carrito');
+
+    let cantidadCarrito = 0;
+    let totalCarrito = 0;
+
+    // Agregar productos al carrito
+    botonesCompra.forEach(boton => {
+        boton.addEventListener('click', () => {
+            cantidadCarrito++;
+            carritoContador.textContent = cantidadCarrito;
+
+            const producto = boton.getAttribute('data-producto');
+            const precio = parseFloat(boton.getAttribute('data-precio'));
+
+            totalCarrito += precio;
+
+            const li = document.createElement('li');
+            li.textContent = `${producto} - $${precio}`;
+            carritoLista.appendChild(li);
+
+            totalBox.textContent = `Total: $${totalCarrito}`;
+        });
+    });
+
+    // Mostrar/ocultar lista del carrito
+    carritoBtn.addEventListener('click', () => {
+        carritoBox.classList.toggle('oculto');
+    });
+</script>
+
+</body>
+</html>
